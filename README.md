@@ -31,9 +31,8 @@ void execFunc() {
 bool checkFunc() {
     if(currentTime >= startTime + 5000) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
 //Setup
@@ -51,8 +50,6 @@ void loop() {
     //Update the current time and show it
     currentTime = millis();
     Serial.println(currentTime);
-    //Wait 500ms
-    delay(500);
     //Handle all async functions
     async.handle();
 }
